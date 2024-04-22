@@ -17,7 +17,7 @@ const useAuth = () => {
     isRun.current = true;
 
     const client = new Keycloak({
-      url: "https://swmax.cloud/",
+      url: "http://localhost:8080/",
       realm: "safewallet",
       clientId: "frontend_client",
     });
@@ -26,7 +26,7 @@ const useAuth = () => {
       // Limpiar sessionStorage
       sessionStorage.clear();
       localStorage.clear();
-      location.replace("https://safewallet-sooty.vercel.app/");
+      location.replace("https://safewalletlocalfront.vercel.app/");
       swal(
         "Sesión expirada",
         "Tu sesión ha expirado. Por favor, inicia sesión nuevamente.",
@@ -73,7 +73,7 @@ const useAuth = () => {
           "El servidor agotó el tiempo de espera, por favor contacta con un administrador. \n" +
             error,
           "error"
-        ).then(() => location.replace("https://safewallet-sooty.vercel.app/"));
+        ).then(() => location.replace("https://safewalletlocalfront.vercel.app/"));
       });
   }, [navigate]);
 

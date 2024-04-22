@@ -21,7 +21,7 @@ const DropdownMenu = (props) => {
     if(response.status === 200) {
       sessionStorage.clear();
       localStorage.clear();
-      window.location.replace("https://safewallet-sooty.vercel.app/");
+      window.location.replace("https://safewalletlocalfront.vercel.app/");
     }
   }
 
